@@ -9,7 +9,7 @@
 import Foundation
 
 final class HomePresenter {
-  weak var view: HomeView?
+  var view: HomeView?
   var router: HomeWireframe!
   var interactor: HomeInteractorInput!
 }

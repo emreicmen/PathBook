@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol HomeView: BaseView {
+protocol HomeView {
   
 }
 
