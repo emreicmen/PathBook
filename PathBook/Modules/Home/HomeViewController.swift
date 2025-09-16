@@ -9,11 +9,10 @@
 import Foundation
 import UIKit
 
-final class HomeViewController: BaseViewController {
+final class HomeViewController: UIViewController {
   var presenter: HomePresentation!
   
   // MARK: Lifecycle
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     
