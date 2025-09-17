@@ -16,6 +16,11 @@
 		69629C0D2E7ACAC400C4BF0E /* LauchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C052E7ACAC400C4BF0E /* LauchContract.swift */; };
 		69629C0E2E7ACAC400C4BF0E /* LauchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C062E7ACAC400C4BF0E /* LauchInteractor.swift */; };
 		69629C0F2E7ACAC400C4BF0E /* Lauch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69629C042E7ACAC400C4BF0E /* Lauch.storyboard */; };
+		69629C192E7AEF9E00C4BF0E /* PlacesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69629C182E7AEF9E00C4BF0E /* PlacesCollectionViewCell.xib */; };
+		69629C1A2E7AEF9E00C4BF0E /* PlacesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C172E7AEF9E00C4BF0E /* PlacesCollectionViewCell.swift */; };
+		69629C232E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69629C222E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.xib */; };
+		69629C242E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C212E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.swift */; };
+		69629C272E7AFCF000C4BF0E /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C262E7AFCF000C4BF0E /* Enums.swift */; };
 		69856D722E79897D00AAF070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69856D692E79897D00AAF070 /* Assets.xcassets */; };
 		69856D742E79897D00AAF070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69856D6C2E79897D00AAF070 /* LaunchScreen.storyboard */; };
 		69856D762E79897D00AAF070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D682E79897D00AAF070 /* AppDelegate.swift */; };
@@ -56,6 +61,11 @@
 		69629C072E7ACAC400C4BF0E /* LauchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchPresenter.swift; sourceTree = "<group>"; };
 		69629C082E7ACAC400C4BF0E /* LauchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchRouter.swift; sourceTree = "<group>"; };
 		69629C092E7ACAC400C4BF0E /* LauchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchViewController.swift; sourceTree = "<group>"; };
+		69629C172E7AEF9E00C4BF0E /* PlacesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesCollectionViewCell.swift; sourceTree = "<group>"; };
+		69629C182E7AEF9E00C4BF0E /* PlacesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlacesCollectionViewCell.xib; sourceTree = "<group>"; };
+		69629C212E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		69629C222E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionViewCell.xib; sourceTree = "<group>"; };
+		69629C262E7AFCF000C4BF0E /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		69856D342E79889600AAF070 /* PathBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69856D4A2E79889800AAF070 /* PathBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69856D542E79889800AAF070 /* PathBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +129,7 @@
 		696252C52E79AF2700F1AB57 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				69629C162E7AEF8C00C4BF0E /* Cell */,
 				69856D862E798A5600AAF070 /* Home.storyboard */,
 				69856D8B2E798A5600AAF070 /* HomeViewController.swift */,
 			);
@@ -210,6 +221,41 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		69629C162E7AEF8C00C4BF0E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				69629C1C2E7AF7B400C4BF0E /* Categories */,
+				69629C1B2E7AF7AB00C4BF0E /* Places */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		69629C1B2E7AF7AB00C4BF0E /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				69629C172E7AEF9E00C4BF0E /* PlacesCollectionViewCell.swift */,
+				69629C182E7AEF9E00C4BF0E /* PlacesCollectionViewCell.xib */,
+			);
+			path = Places;
+			sourceTree = "<group>";
+		};
+		69629C1C2E7AF7B400C4BF0E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				69629C212E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.swift */,
+				69629C222E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.xib */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		69629C252E7AFCDE00C4BF0E /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				69629C262E7AFCF000C4BF0E /* Enums.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		69856D2B2E79889600AAF070 = {
 			isa = PBXGroup;
 			children = (
@@ -232,12 +278,12 @@
 		69856D712E79897D00AAF070 /* PathBook */ = {
 			isa = PBXGroup;
 			children = (
+				69629C252E7AFCDE00C4BF0E /* Config */,
 				69856D6A2E79897D00AAF070 /* Info.plist */,
 				696252D22E79B4C600F1AB57 /* Extensions */,
 				69856D832E7989F900AAF070 /* Delegates */,
 				69856D842E798A1300AAF070 /* Modules */,
 				69856D792E79898400AAF070 /* Resources */,
-				69856D6C2E79897D00AAF070 /* LaunchScreen.storyboard */,
 			);
 			path = PathBook;
 			sourceTree = "<group>";
@@ -246,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				69856D692E79897D00AAF070 /* Assets.xcassets */,
+				69856D6C2E79897D00AAF070 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -423,6 +470,8 @@
 			files = (
 				69629C0F2E7ACAC400C4BF0E /* Lauch.storyboard in Resources */,
 				69856D722E79897D00AAF070 /* Assets.xcassets in Resources */,
+				69629C232E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.xib in Resources */,
+				69629C192E7AEF9E00C4BF0E /* PlacesCollectionViewCell.xib in Resources */,
 				69856D742E79897D00AAF070 /* LaunchScreen.storyboard in Resources */,
 				69856D8C2E798A5600AAF070 /* Home.storyboard in Resources */,
 			);
@@ -455,12 +504,15 @@
 				69629C0B2E7ACAC400C4BF0E /* LauchViewController.swift in Sources */,
 				69629C0C2E7ACAC400C4BF0E /* LauchPresenter.swift in Sources */,
 				69629C0D2E7ACAC400C4BF0E /* LauchContract.swift in Sources */,
+				69629C1A2E7AEF9E00C4BF0E /* PlacesCollectionViewCell.swift in Sources */,
 				69629C0E2E7ACAC400C4BF0E /* LauchInteractor.swift in Sources */,
 				696252CE2E79B01100F1AB57 /* BaseInteractor.swift in Sources */,
+				69629C242E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.swift in Sources */,
 				69856D8E2E798A5600AAF070 /* HomePresenter.swift in Sources */,
 				69856D8F2E798A5600AAF070 /* HomeInteractor.swift in Sources */,
 				69856D902E798A5600AAF070 /* HomeRouter.swift in Sources */,
 				69856D912E798A5600AAF070 /* HomeContract.swift in Sources */,
+				69629C272E7AFCF000C4BF0E /* Enums.swift in Sources */,
 				696252D42E79B4C900F1AB57 /* UIStoryboardExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

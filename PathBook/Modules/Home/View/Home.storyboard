@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,17 +19,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnC-aQ-3Eu">
-                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PMt-OZ-fyi">
+                                <rect key="frame" x="16" y="172" width="361" height="616"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f02-jH-P9U">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <searchBar contentMode="redraw" id="BqD-zV-d4p">
+                                        <rect key="frame" x="0.0" y="47" width="361" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="S4r-Y8-MDk"/>
+                                        </connections>
+                                    </searchBar>
+                                    <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6cT-6v-J3V">
+                                        <rect key="frame" x="0.0" y="119" width="361" height="497"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="16" minimumInteritemSpacing="16" id="toa-Ia-ODG">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="Vm5-Mt-SuE"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="ARJ-Ec-YZd"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CGl-TP-CeX">
+                                <rect key="frame" x="0.0" y="792" width="393" height="60"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mp3-KO-9Zp"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lnC-aQ-3Eu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TN7-Y4-nWi"/>
-                            <constraint firstItem="lnC-aQ-3Eu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ezd-5c-0Yp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PMt-OZ-fyi" secondAttribute="trailing" id="35P-Sa-CxZ"/>
+                            <constraint firstItem="CGl-TP-CeX" firstAttribute="top" secondItem="PMt-OZ-fyi" secondAttribute="bottom" constant="4" id="BuZ-RJ-piF"/>
+                            <constraint firstItem="PMt-OZ-fyi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="HBu-4w-aXP"/>
+                            <constraint firstAttribute="bottom" secondItem="CGl-TP-CeX" secondAttribute="bottom" id="JFt-Hv-ORq"/>
+                            <constraint firstItem="CGl-TP-CeX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QVo-Bj-AEc"/>
+                            <constraint firstItem="PMt-OZ-fyi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="XQi-Bd-E7q"/>
+                            <constraint firstAttribute="trailing" secondItem="CGl-TP-CeX" secondAttribute="trailing" id="kTr-TF-v2i"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jji-uH-Yqx">
@@ -37,15 +79,38 @@
                                 <action selector="backButtonTapped:" destination="BYZ-38-t0r" id="xcB-gd-x5a"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="zdT-vs-aXP">
+                            <view key="customView" contentMode="scaleToFill" id="lZG-fH-0gf">
+                                <rect key="frame" x="290" y="5.6666666666666679" width="87" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-Io-Ude">
+                                        <rect key="frame" x="21" y="-1" width="47" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="plus" catalog="system"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                        <connections>
+                                            <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfH-4q-h7E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="testLabel" destination="lnC-aQ-3Eu" id="Q4C-eK-eOQ"/>
+                        <outlet property="addBanner" destination="CGl-TP-CeX" id="L23-CB-AaM"/>
+                        <outlet property="placeCollectionView" destination="6cT-6v-J3V" id="4NO-NU-ou5"/>
+                        <outlet property="segmentControl" destination="f02-jH-P9U" id="wJw-1P-dTZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1492" y="98.50074962518741"/>
+            <point key="canvasLocation" x="1490.8396946564885" y="97.887323943661983"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZOX-3A-TnB">
@@ -68,5 +133,15 @@
     </scenes>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

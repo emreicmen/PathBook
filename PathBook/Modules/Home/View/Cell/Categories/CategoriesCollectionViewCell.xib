@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" reuseIdentifier="CategoriesCollectionViewCell" id="gTV-IL-0wX" customClass="CategoriesCollectionViewCell" customModule="PathBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-vn-3mU">
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6z-0V-lHB">
+                                <rect key="frame" x="10" y="10" width="55" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafê" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-rV-pPU">
+                                        <rect key="frame" x="13" y="7" width="29" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstItem="tLx-rV-pPU" firstAttribute="centerX" secondItem="V6z-0V-lHB" secondAttribute="centerX" id="jda-D9-EoY"/>
+                                    <constraint firstItem="tLx-rV-pPU" firstAttribute="centerY" secondItem="V6z-0V-lHB" secondAttribute="centerY" id="rSF-Sp-Pqx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="V6z-0V-lHB" secondAttribute="bottom" constant="10" id="03H-SR-i4s"/>
+                            <constraint firstItem="V6z-0V-lHB" firstAttribute="top" secondItem="Mtg-vn-3mU" secondAttribute="top" constant="10" id="7j8-fm-TVS"/>
+                            <constraint firstItem="V6z-0V-lHB" firstAttribute="leading" secondItem="Mtg-vn-3mU" secondAttribute="leading" constant="10" id="YIe-LM-NnZ"/>
+                            <constraint firstAttribute="trailing" secondItem="V6z-0V-lHB" secondAttribute="trailing" constant="10" id="sZ2-n6-ShB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Mtg-vn-3mU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eKp-mY-Vjo"/>
+                <constraint firstItem="Mtg-vn-3mU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fZc-hg-PH2"/>
+                <constraint firstAttribute="bottom" secondItem="Mtg-vn-3mU" secondAttribute="bottom" id="mnR-bZ-KeV"/>
+                <constraint firstAttribute="trailing" secondItem="Mtg-vn-3mU" secondAttribute="trailing" id="zXa-9C-ooW"/>
+            </constraints>
+            <connections>
+                <outlet property="categoryNameLabel" destination="tLx-rV-pPU" id="7Bw-GM-jgu"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
