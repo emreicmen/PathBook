@@ -16,10 +16,12 @@ final class HomePresenter {
 
 extension HomePresenter: HomePresentation {
   func viewDidLoad() {
-    
+    view?.setupUI()
+  }
+  
+  func backButtonTapped() {
+    router.pop()
   }
 }
 
-extension HomePresenter: HomeInteractorOutput {
-  
-}
+extension HomePresenter: HomeInteractorOutput {}

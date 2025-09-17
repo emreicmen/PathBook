@@ -6,14 +6,15 @@
 //  
 //
 
-import Foundation
 import UIKit
 
 final class HomeRouter {
   weak var view: UIViewController?
   
   static func setupModule() -> HomeViewController {
-    let viewController = UIStoryboard.viewController(fromStoryboard: "Home") as! HomeViewController
+    let navigationController = UIStoryboard.viewController(fromStoryboard: "Home") as! UINavigationController
+    let viewController = navigationController.visibleViewController as! HomeViewController
+    
     let presenter = HomePresenter()
     let router = HomeRouter()
     let interactor = HomeInteractor()
@@ -33,5 +34,7 @@ final class HomeRouter {
 }
 
 extension HomeRouter: HomeWireframe {
-  
+  func pop() {
+    view?.dismiss(animated: true)
+  }
 }

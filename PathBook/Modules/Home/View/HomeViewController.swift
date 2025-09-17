@@ -6,20 +6,27 @@
 //  
 //
 
-import Foundation
 import UIKit
 
 final class HomeViewController: UIViewController {
-  var presenter: HomePresentation!
+  @IBOutlet weak var testLabel: UILabel!
   
+  var presenter: HomePresentation!
   // MARK: Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    testLabel.text = "Test"
+    
     presenter.viewDidLoad()
+  }
+  @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
+    presenter.backButtonTapped()
   }
 }
 
 extension HomeViewController: HomeView {
-  
+  func setupUI() {
+    navigationItem.title = "Homepage"
+  }
 }

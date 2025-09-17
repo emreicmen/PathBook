@@ -10,12 +10,15 @@
 		696252CE2E79B01100F1AB57 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696252C82E79B01100F1AB57 /* BaseInteractor.swift */; };
 		696252D12E79B04200F1AB57 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 696252D02E79B04200F1AB57 /* RxSwift */; };
 		696252D42E79B4C900F1AB57 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696252D32E79B4C900F1AB57 /* UIStoryboardExtension.swift */; };
+		69629C0A2E7ACAC400C4BF0E /* LauchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C082E7ACAC400C4BF0E /* LauchRouter.swift */; };
+		69629C0B2E7ACAC400C4BF0E /* LauchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C092E7ACAC400C4BF0E /* LauchViewController.swift */; };
+		69629C0C2E7ACAC400C4BF0E /* LauchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C072E7ACAC400C4BF0E /* LauchPresenter.swift */; };
+		69629C0D2E7ACAC400C4BF0E /* LauchContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C052E7ACAC400C4BF0E /* LauchContract.swift */; };
+		69629C0E2E7ACAC400C4BF0E /* LauchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69629C062E7ACAC400C4BF0E /* LauchInteractor.swift */; };
+		69629C0F2E7ACAC400C4BF0E /* Lauch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69629C042E7ACAC400C4BF0E /* Lauch.storyboard */; };
 		69856D722E79897D00AAF070 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69856D692E79897D00AAF070 /* Assets.xcassets */; };
 		69856D742E79897D00AAF070 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69856D6C2E79897D00AAF070 /* LaunchScreen.storyboard */; };
-		69856D752E79897D00AAF070 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69856D6E2E79897D00AAF070 /* Main.storyboard */; };
 		69856D762E79897D00AAF070 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D682E79897D00AAF070 /* AppDelegate.swift */; };
-		69856D772E79897D00AAF070 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D6F2E79897D00AAF070 /* SceneDelegate.swift */; };
-		69856D782E79897D00AAF070 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D702E79897D00AAF070 /* ViewController.swift */; };
 		69856D7C2E79899F00AAF070 /* PathBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D7A2E79899F00AAF070 /* PathBookTests.swift */; };
 		69856D802E7989A200AAF070 /* PathBookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D7D2E7989A200AAF070 /* PathBookUITests.swift */; };
 		69856D812E7989A200AAF070 /* PathBookUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D7E2E7989A200AAF070 /* PathBookUITestsLaunchTests.swift */; };
@@ -47,6 +50,12 @@
 /* Begin PBXFileReference section */
 		696252C82E79B01100F1AB57 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		696252D32E79B4C900F1AB57 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		69629C042E7ACAC400C4BF0E /* Lauch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lauch.storyboard; sourceTree = "<group>"; };
+		69629C052E7ACAC400C4BF0E /* LauchContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchContract.swift; sourceTree = "<group>"; };
+		69629C062E7ACAC400C4BF0E /* LauchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchInteractor.swift; sourceTree = "<group>"; };
+		69629C072E7ACAC400C4BF0E /* LauchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchPresenter.swift; sourceTree = "<group>"; };
+		69629C082E7ACAC400C4BF0E /* LauchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchRouter.swift; sourceTree = "<group>"; };
+		69629C092E7ACAC400C4BF0E /* LauchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchViewController.swift; sourceTree = "<group>"; };
 		69856D342E79889600AAF070 /* PathBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69856D4A2E79889800AAF070 /* PathBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		69856D542E79889800AAF070 /* PathBookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PathBookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,9 +63,6 @@
 		69856D692E79897D00AAF070 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69856D6A2E79897D00AAF070 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		69856D6B2E79897D00AAF070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		69856D6D2E79897D00AAF070 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		69856D6F2E79897D00AAF070 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		69856D702E79897D00AAF070 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		69856D7A2E79899F00AAF070 /* PathBookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathBookTests.swift; sourceTree = "<group>"; };
 		69856D7D2E7989A200AAF070 /* PathBookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathBookUITests.swift; sourceTree = "<group>"; };
 		69856D7E2E7989A200AAF070 /* PathBookUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathBookUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -151,6 +157,59 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		69629C102E7ADEBA00C4BF0E /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				69629C122E7ADF1E00C4BF0E /* Contract */,
+				69629C152E7ADFAC00C4BF0E /* Presenter */,
+				69629C142E7ADF2800C4BF0E /* Interactor */,
+				69629C132E7ADF2400C4BF0E /* View */,
+				69629C112E7ADF1900C4BF0E /* Router */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		69629C112E7ADF1900C4BF0E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				69629C082E7ACAC400C4BF0E /* LauchRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		69629C122E7ADF1E00C4BF0E /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				69629C052E7ACAC400C4BF0E /* LauchContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		69629C132E7ADF2400C4BF0E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				69629C042E7ACAC400C4BF0E /* Lauch.storyboard */,
+				69629C092E7ACAC400C4BF0E /* LauchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69629C142E7ADF2800C4BF0E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				69629C062E7ACAC400C4BF0E /* LauchInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		69629C152E7ADFAC00C4BF0E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				69629C072E7ACAC400C4BF0E /* LauchPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		69856D2B2E79889600AAF070 = {
 			isa = PBXGroup;
 			children = (
@@ -173,13 +232,12 @@
 		69856D712E79897D00AAF070 /* PathBook */ = {
 			isa = PBXGroup;
 			children = (
+				69856D6A2E79897D00AAF070 /* Info.plist */,
 				696252D22E79B4C600F1AB57 /* Extensions */,
 				69856D832E7989F900AAF070 /* Delegates */,
 				69856D842E798A1300AAF070 /* Modules */,
 				69856D792E79898400AAF070 /* Resources */,
 				69856D6C2E79897D00AAF070 /* LaunchScreen.storyboard */,
-				69856D6E2E79897D00AAF070 /* Main.storyboard */,
-				69856D702E79897D00AAF070 /* ViewController.swift */,
 			);
 			path = PathBook;
 			sourceTree = "<group>";
@@ -187,7 +245,6 @@
 		69856D792E79898400AAF070 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				69856D6A2E79897D00AAF070 /* Info.plist */,
 				69856D692E79897D00AAF070 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -223,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				69856D682E79897D00AAF070 /* AppDelegate.swift */,
-				69856D6F2E79897D00AAF070 /* SceneDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -232,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				696252CB2E79B01100F1AB57 /* Base */,
+				69629C102E7ADEBA00C4BF0E /* Launch */,
 				69856D852E798A4300AAF070 /* Home */,
 			);
 			path = Modules;
@@ -364,9 +421,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69629C0F2E7ACAC400C4BF0E /* Lauch.storyboard in Resources */,
 				69856D722E79897D00AAF070 /* Assets.xcassets in Resources */,
 				69856D742E79897D00AAF070 /* LaunchScreen.storyboard in Resources */,
-				69856D752E79897D00AAF070 /* Main.storyboard in Resources */,
 				69856D8C2E798A5600AAF070 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,15 +450,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				69856D762E79897D00AAF070 /* AppDelegate.swift in Sources */,
-				69856D772E79897D00AAF070 /* SceneDelegate.swift in Sources */,
 				69856D8D2E798A5600AAF070 /* HomeViewController.swift in Sources */,
+				69629C0A2E7ACAC400C4BF0E /* LauchRouter.swift in Sources */,
+				69629C0B2E7ACAC400C4BF0E /* LauchViewController.swift in Sources */,
+				69629C0C2E7ACAC400C4BF0E /* LauchPresenter.swift in Sources */,
+				69629C0D2E7ACAC400C4BF0E /* LauchContract.swift in Sources */,
+				69629C0E2E7ACAC400C4BF0E /* LauchInteractor.swift in Sources */,
 				696252CE2E79B01100F1AB57 /* BaseInteractor.swift in Sources */,
 				69856D8E2E798A5600AAF070 /* HomePresenter.swift in Sources */,
 				69856D8F2E798A5600AAF070 /* HomeInteractor.swift in Sources */,
 				69856D902E798A5600AAF070 /* HomeRouter.swift in Sources */,
 				69856D912E798A5600AAF070 /* HomeContract.swift in Sources */,
 				696252D42E79B4C900F1AB57 /* UIStoryboardExtension.swift in Sources */,
-				69856D782E79897D00AAF070 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,14 +506,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		69856D6E2E79897D00AAF070 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				69856D6D2E79897D00AAF070 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -465,10 +517,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PathBook/Resources/Info.plist;
+				INFOPLIST_FILE = PathBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;
@@ -497,10 +549,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PathBook/Resources/Info.plist;
+				INFOPLIST_FILE = PathBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17;

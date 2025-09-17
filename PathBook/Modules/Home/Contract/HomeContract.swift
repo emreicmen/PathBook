@@ -9,11 +9,13 @@
 import Foundation
 
 protocol HomeView {
-  
+  func setupUI()
 }
 
 protocol HomePresentation: AnyObject {
   func viewDidLoad()
+  
+  func backButtonTapped()
 }
 
 protocol HomeInteractorInput: AnyObject {
@@ -25,5 +27,5 @@ protocol HomeInteractorOutput: AnyObject {
 }
 
 protocol HomeWireframe: AnyObject {
-  
+  func pop()
 }
