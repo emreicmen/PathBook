@@ -8,34 +8,52 @@
 import UIKit
 
 class PlacesCollectionViewCell: UICollectionViewCell {
-  @IBOutlet weak var placeNameLabel: UILabel!
-  @IBOutlet weak var categoryCollectionView: UICollectionView!
-  @IBOutlet weak var placeLocationLabel: UILabel!
-  @IBOutlet weak var placeSummaryLabel: UILabel!
-  @IBOutlet weak var placeImageView: UIImageView!
-  @IBOutlet weak var pageControl: UIPageControl!
+  @IBOutlet weak var placeCollectionView: UICollectionView!
   
-  func configure() {
+  private var places: [Place] = []
+
+  func configure(with places: [Place]) {
+    self.places = places
+
     configureCategoryCollectionView()
   }
   
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    // İçteki collectionView her zaman en önde olsun
+    contentView.bringSubviewToFront(placeCollectionView)
+  }
+
   private func configureCategoryCollectionView() {
-    let nib = UINib(nibName: CollectionViewCellIdentifier.category, bundle: nil)
-    categoryCollectionView.register(nib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.category)
+    let layout = UICollectionViewFlowLayout()
+    layout.scrollDirection = .vertical
+    layout.minimumLineSpacing = 8
+    layout.minimumInteritemSpacing = 8
     
-    categoryCollectionView.delegate = self
-    categoryCollectionView.dataSource = self
+    placeCollectionView.collectionViewLayout = layout
+    placeCollectionView.showsHorizontalScrollIndicator = false
+    
+    let nib = UINib(nibName: CollectionViewCellIdentifier.placeList, bundle: nil)
+    placeCollectionView.register(nib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.placeList)
+    
+    placeCollectionView.dataSource = self
+    placeCollectionView.delegate = self
+
+    if places.count > 0 {
+        placeCollectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .top, animated: false)
+    }
   }
 }
 
 extension PlacesCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 10
+    return places.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCellIdentifier.category,for: indexPath) as! CategoriesCollectionViewCell
-    cell.configure()
+    let place = places[indexPath.row]
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCellIdentifier.placeList,for: indexPath) as! PlaceListCollectionViewCell
+    cell.configure(with: place)
     
     return cell
   }
@@ -43,10 +61,15 @@ extension PlacesCollectionViewCell: UICollectionViewDelegate, UICollectionViewDa
 
 extension PlacesCollectionViewCell: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    let width: CGFloat = 75   // istediğin sabit yükseklik
-    let height: CGFloat = 50   // istediğin sabit yükseklik
+//    let width: CGFloat = 75   // istediğin sabit yükseklik
+//    let height: CGFloat = 50   // istediğin sabit yükseklik
+//    
+//    return CGSize(width: width, height: height)
+  
+  let width = UIScreen.main.bounds.width - 12
+  let height: CGFloat = 200
     
-    return CGSize(width: width, height: height)
+  return CGSize(width: width, height: height)
   }
 }
 

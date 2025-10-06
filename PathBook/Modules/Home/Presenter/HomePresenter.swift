@@ -22,6 +22,11 @@ extension HomePresenter: HomePresentation {
   func backButtonTapped() {
     router.pop()
   }
+  
+    
+  func addButtonTapped() {
+    router.routeToAddPlace()
+  }
 }
 
 extension HomePresenter: HomeInteractorOutput {}

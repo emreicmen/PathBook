@@ -16,6 +16,7 @@ protocol HomePresentation: AnyObject {
   func viewDidLoad()
   
   func backButtonTapped()
+  func addButtonTapped()
 }
 
 protocol HomeInteractorInput: AnyObject {
@@ -28,4 +29,6 @@ protocol HomeInteractorOutput: AnyObject {
 
 protocol HomeWireframe: AnyObject {
   func pop()
+  
+  func routeToAddPlace()
 }

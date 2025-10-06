@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		695AD6F72E900B8A0009029F /* PlaceListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 695AD6F62E900B8A0009029F /* PlaceListCollectionViewCell.xib */; };
+		695AD6F82E900B8A0009029F /* PlaceListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695AD6F52E900B8A0009029F /* PlaceListCollectionViewCell.swift */; };
 		696252CE2E79B01100F1AB57 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696252C82E79B01100F1AB57 /* BaseInteractor.swift */; };
 		696252D12E79B04200F1AB57 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 696252D02E79B04200F1AB57 /* RxSwift */; };
 		696252D42E79B4C900F1AB57 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696252D32E79B4C900F1AB57 /* UIStoryboardExtension.swift */; };
@@ -33,6 +35,30 @@
 		69856D8F2E798A5600AAF070 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D882E798A5600AAF070 /* HomeInteractor.swift */; };
 		69856D902E798A5600AAF070 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D8A2E798A5600AAF070 /* HomeRouter.swift */; };
 		69856D912E798A5600AAF070 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D872E798A5600AAF070 /* HomeContract.swift */; };
+		699F47682E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F47662E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift */; };
+		699F47692E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 699F47672E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib */; };
+		699F47752E7C2E13000A02B9 /* AddImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 699F47742E7C2E13000A02B9 /* AddImageCollectionViewCell.xib */; };
+		699F47762E7C2E13000A02B9 /* AddImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F47732E7C2E13000A02B9 /* AddImageCollectionViewCell.swift */; };
+		69A837252E7B42640022B8D9 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A837242E7B42640022B8D9 /* AddPlaceViewController.swift */; };
+		69A837262E7B42640022B8D9 /* AddPlaceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A837202E7B42640022B8D9 /* AddPlaceContract.swift */; };
+		69A837272E7B42640022B8D9 /* AddPlacePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A837222E7B42640022B8D9 /* AddPlacePresenter.swift */; };
+		69A837282E7B42640022B8D9 /* AddPlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A837212E7B42640022B8D9 /* AddPlaceInteractor.swift */; };
+		69A837292E7B42640022B8D9 /* AddPlaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A837232E7B42640022B8D9 /* AddPlaceRouter.swift */; };
+		69A8372A2E7B42640022B8D9 /* AddPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A8371F2E7B42640022B8D9 /* AddPlace.storyboard */; };
+		69CF35462E7EB2FB007CDB63 /* AdBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CF35452E7EB2FB007CDB63 /* AdBannerView.xib */; };
+		69CF35472E7EB2FB007CDB63 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CF35442E7EB2FB007CDB63 /* AdBannerView.swift */; };
+		69CF354A2E7EB415007CDB63 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 69CF35492E7EB415007CDB63 /* SnapKit */; };
+		69D08F292E8FFCF5009BAD75 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D08F282E8FFCF5009BAD75 /* Place.swift */; };
+		69F28B352E7F02C600714A3E /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F28B322E7F02C600714A3E /* SegmentedControlView.swift */; };
+		69F28B362E7F02C600714A3E /* SegmentedControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F28B332E7F02C600714A3E /* SegmentedControlView.xib */; };
+		69F28B3A2E7F036000714A3E /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F28B372E7F036000714A3E /* SearchBarView.swift */; };
+		69F28B3B2E7F036000714A3E /* SearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F28B382E7F036000714A3E /* SearchBarView.xib */; };
+		69F28B3F2E7F039600714A3E /* MapKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F28B3C2E7F039600714A3E /* MapKitView.swift */; };
+		69F28B402E7F039600714A3E /* MapKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F28B3D2E7F039600714A3E /* MapKitView.xib */; };
+		69F28B492E7F054100714A3E /* SearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F28B472E7F054100714A3E /* SearchCollectionViewCell.swift */; };
+		69F28B4A2E7F054100714A3E /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F28B482E7F054100714A3E /* SearchCollectionViewCell.xib */; };
+		69F28B4D2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F28B4B2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift */; };
+		69F28B4E2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F28B4C2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +79,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		695AD6F52E900B8A0009029F /* PlaceListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListCollectionViewCell.swift; sourceTree = "<group>"; };
+		695AD6F62E900B8A0009029F /* PlaceListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceListCollectionViewCell.xib; sourceTree = "<group>"; };
 		696252C82E79B01100F1AB57 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
 		696252D32E79B4C900F1AB57 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		69629C042E7ACAC400C4BF0E /* Lauch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Lauch.storyboard; sourceTree = "<group>"; };
@@ -82,6 +110,29 @@
 		69856D892E798A5600AAF070 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		69856D8A2E798A5600AAF070 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		69856D8B2E798A5600AAF070 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		699F47662E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectCollectionViewCell.swift; sourceTree = "<group>"; };
+		699F47672E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectCollectionViewCell.xib; sourceTree = "<group>"; };
+		699F47732E7C2E13000A02B9 /* AddImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		699F47742E7C2E13000A02B9 /* AddImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		69A8371F2E7B42640022B8D9 /* AddPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlace.storyboard; sourceTree = "<group>"; };
+		69A837202E7B42640022B8D9 /* AddPlaceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceContract.swift; sourceTree = "<group>"; };
+		69A837212E7B42640022B8D9 /* AddPlaceInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceInteractor.swift; sourceTree = "<group>"; };
+		69A837222E7B42640022B8D9 /* AddPlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlacePresenter.swift; sourceTree = "<group>"; };
+		69A837232E7B42640022B8D9 /* AddPlaceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceRouter.swift; sourceTree = "<group>"; };
+		69A837242E7B42640022B8D9 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
+		69CF35442E7EB2FB007CDB63 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
+		69CF35452E7EB2FB007CDB63 /* AdBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdBannerView.xib; sourceTree = "<group>"; };
+		69D08F282E8FFCF5009BAD75 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		69F28B322E7F02C600714A3E /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
+		69F28B332E7F02C600714A3E /* SegmentedControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedControlView.xib; sourceTree = "<group>"; };
+		69F28B372E7F036000714A3E /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		69F28B382E7F036000714A3E /* SearchBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBarView.xib; sourceTree = "<group>"; };
+		69F28B3C2E7F039600714A3E /* MapKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitView.swift; sourceTree = "<group>"; };
+		69F28B3D2E7F039600714A3E /* MapKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitView.xib; sourceTree = "<group>"; };
+		69F28B472E7F054100714A3E /* SearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		69F28B482E7F054100714A3E /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
+		69F28B4B2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlCollectionViewCell.swift; sourceTree = "<group>"; };
+		69F28B4C2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedControlCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				696252D12E79B04200F1AB57 /* RxSwift in Frameworks */,
+				69CF354A2E7EB415007CDB63 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +276,10 @@
 		69629C162E7AEF8C00C4BF0E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				69629C1C2E7AF7B400C4BF0E /* Categories */,
+				69F28B4F2E7F0C9500714A3E /* SegmentedControl */,
+				69F28B462E7F053000714A3E /* Search */,
 				69629C1B2E7AF7AB00C4BF0E /* Places */,
+				69629C1C2E7AF7B400C4BF0E /* Categories */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -235,6 +289,7 @@
 			children = (
 				69629C172E7AEF9E00C4BF0E /* PlacesCollectionViewCell.swift */,
 				69629C182E7AEF9E00C4BF0E /* PlacesCollectionViewCell.xib */,
+				69D08F2E2E9003CD009BAD75 /* Cell */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -278,6 +333,8 @@
 		69856D712E79897D00AAF070 /* PathBook */ = {
 			isa = PBXGroup;
 			children = (
+				69D08F272E8FFC16009BAD75 /* Entities */,
+				69CF354B2E7EBF4B007CDB63 /* Views */,
 				69629C252E7AFCDE00C4BF0E /* Config */,
 				69856D6A2E79897D00AAF070 /* Info.plist */,
 				696252D22E79B4C600F1AB57 /* Extensions */,
@@ -334,6 +391,7 @@
 		69856D842E798A1300AAF070 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				69A8371E2E7B42520022B8D9 /* Add Place */,
 				696252CB2E79B01100F1AB57 /* Base */,
 				69629C102E7ADEBA00C4BF0E /* Launch */,
 				69856D852E798A4300AAF070 /* Home */,
@@ -351,6 +409,161 @@
 				696252C72E79AF3400F1AB57 /* Router */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		699F47652E7BE3A6000A02B9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				699F47662E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift */,
+				699F47672E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		699F47722E7C2DCD000A02B9 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				699F47732E7C2E13000A02B9 /* AddImageCollectionViewCell.swift */,
+				699F47742E7C2E13000A02B9 /* AddImageCollectionViewCell.xib */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		69A8371E2E7B42520022B8D9 /* Add Place */ = {
+			isa = PBXGroup;
+			children = (
+				69A8372F2E7B429B0022B8D9 /* Contract */,
+				69A8372E2E7B42970022B8D9 /* View */,
+				69A8372D2E7B428D0022B8D9 /* Interactor */,
+				69A8372C2E7B42820022B8D9 /* Presenter */,
+				69A8372B2E7B427C0022B8D9 /* Router */,
+			);
+			path = "Add Place";
+			sourceTree = "<group>";
+		};
+		69A8372B2E7B427C0022B8D9 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				69A837232E7B42640022B8D9 /* AddPlaceRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		69A8372C2E7B42820022B8D9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				69A837222E7B42640022B8D9 /* AddPlacePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		69A8372D2E7B428D0022B8D9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				69A837212E7B42640022B8D9 /* AddPlaceInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		69A8372E2E7B42970022B8D9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				699F47722E7C2DCD000A02B9 /* Image */,
+				699F47652E7BE3A6000A02B9 /* Category */,
+				69A8371F2E7B42640022B8D9 /* AddPlace.storyboard */,
+				69A837242E7B42640022B8D9 /* AddPlaceViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		69A8372F2E7B429B0022B8D9 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				69A837202E7B42640022B8D9 /* AddPlaceContract.swift */,
+			);
+			path = Contract;
+			sourceTree = "<group>";
+		};
+		69CF353D2E7EB127007CDB63 /* AdBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				69CF35442E7EB2FB007CDB63 /* AdBannerView.swift */,
+				69CF35452E7EB2FB007CDB63 /* AdBannerView.xib */,
+			);
+			path = AdBannerView;
+			sourceTree = "<group>";
+		};
+		69CF354B2E7EBF4B007CDB63 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69F28B3E2E7F039600714A3E /* MapKitView */,
+				69F28B392E7F036000714A3E /* SearchBarView */,
+				69F28B342E7F02C600714A3E /* SegmentedControlView */,
+				69CF353D2E7EB127007CDB63 /* AdBannerView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		69D08F272E8FFC16009BAD75 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				69D08F282E8FFCF5009BAD75 /* Place.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		69D08F2E2E9003CD009BAD75 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				695AD6F52E900B8A0009029F /* PlaceListCollectionViewCell.swift */,
+				695AD6F62E900B8A0009029F /* PlaceListCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		69F28B342E7F02C600714A3E /* SegmentedControlView */ = {
+			isa = PBXGroup;
+			children = (
+				69F28B322E7F02C600714A3E /* SegmentedControlView.swift */,
+				69F28B332E7F02C600714A3E /* SegmentedControlView.xib */,
+			);
+			path = SegmentedControlView;
+			sourceTree = "<group>";
+		};
+		69F28B392E7F036000714A3E /* SearchBarView */ = {
+			isa = PBXGroup;
+			children = (
+				69F28B372E7F036000714A3E /* SearchBarView.swift */,
+				69F28B382E7F036000714A3E /* SearchBarView.xib */,
+			);
+			path = SearchBarView;
+			sourceTree = "<group>";
+		};
+		69F28B3E2E7F039600714A3E /* MapKitView */ = {
+			isa = PBXGroup;
+			children = (
+				69F28B3C2E7F039600714A3E /* MapKitView.swift */,
+				69F28B3D2E7F039600714A3E /* MapKitView.xib */,
+			);
+			path = MapKitView;
+			sourceTree = "<group>";
+		};
+		69F28B462E7F053000714A3E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				69F28B472E7F054100714A3E /* SearchCollectionViewCell.swift */,
+				69F28B482E7F054100714A3E /* SearchCollectionViewCell.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		69F28B4F2E7F0C9500714A3E /* SegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				69F28B4B2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift */,
+				69F28B4C2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib */,
+			);
+			path = SegmentedControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +584,7 @@
 			name = PathBook;
 			packageProductDependencies = (
 				696252D02E79B04200F1AB57 /* RxSwift */,
+				69CF35492E7EB415007CDB63 /* SnapKit */,
 			);
 			productName = PathBook;
 			productReference = 69856D342E79889600AAF070 /* PathBook.app */;
@@ -450,6 +664,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				696252CF2E79B04200F1AB57 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				69CF35482E7EB415007CDB63 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 69856D352E79889600AAF070 /* Products */;
@@ -468,11 +683,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69CF35462E7EB2FB007CDB63 /* AdBannerView.xib in Resources */,
+				69A8372A2E7B42640022B8D9 /* AddPlace.storyboard in Resources */,
 				69629C0F2E7ACAC400C4BF0E /* Lauch.storyboard in Resources */,
+				699F47692E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib in Resources */,
 				69856D722E79897D00AAF070 /* Assets.xcassets in Resources */,
 				69629C232E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.xib in Resources */,
 				69629C192E7AEF9E00C4BF0E /* PlacesCollectionViewCell.xib in Resources */,
+				69F28B362E7F02C600714A3E /* SegmentedControlView.xib in Resources */,
+				695AD6F72E900B8A0009029F /* PlaceListCollectionViewCell.xib in Resources */,
 				69856D742E79897D00AAF070 /* LaunchScreen.storyboard in Resources */,
+				69F28B402E7F039600714A3E /* MapKitView.xib in Resources */,
+				69F28B4E2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib in Resources */,
+				699F47752E7C2E13000A02B9 /* AddImageCollectionViewCell.xib in Resources */,
+				69F28B4A2E7F054100714A3E /* SearchCollectionViewCell.xib in Resources */,
+				69F28B3B2E7F036000714A3E /* SearchBarView.xib in Resources */,
 				69856D8C2E798A5600AAF070 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,22 +723,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699F47682E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift in Sources */,
+				69F28B3A2E7F036000714A3E /* SearchBarView.swift in Sources */,
 				69856D762E79897D00AAF070 /* AppDelegate.swift in Sources */,
+				69F28B352E7F02C600714A3E /* SegmentedControlView.swift in Sources */,
 				69856D8D2E798A5600AAF070 /* HomeViewController.swift in Sources */,
 				69629C0A2E7ACAC400C4BF0E /* LauchRouter.swift in Sources */,
 				69629C0B2E7ACAC400C4BF0E /* LauchViewController.swift in Sources */,
 				69629C0C2E7ACAC400C4BF0E /* LauchPresenter.swift in Sources */,
+				69CF35472E7EB2FB007CDB63 /* AdBannerView.swift in Sources */,
+				69D08F292E8FFCF5009BAD75 /* Place.swift in Sources */,
 				69629C0D2E7ACAC400C4BF0E /* LauchContract.swift in Sources */,
 				69629C1A2E7AEF9E00C4BF0E /* PlacesCollectionViewCell.swift in Sources */,
 				69629C0E2E7ACAC400C4BF0E /* LauchInteractor.swift in Sources */,
 				696252CE2E79B01100F1AB57 /* BaseInteractor.swift in Sources */,
 				69629C242E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.swift in Sources */,
 				69856D8E2E798A5600AAF070 /* HomePresenter.swift in Sources */,
+				695AD6F82E900B8A0009029F /* PlaceListCollectionViewCell.swift in Sources */,
 				69856D8F2E798A5600AAF070 /* HomeInteractor.swift in Sources */,
 				69856D902E798A5600AAF070 /* HomeRouter.swift in Sources */,
+				69A837252E7B42640022B8D9 /* AddPlaceViewController.swift in Sources */,
+				69A837262E7B42640022B8D9 /* AddPlaceContract.swift in Sources */,
+				69F28B3F2E7F039600714A3E /* MapKitView.swift in Sources */,
+				699F47762E7C2E13000A02B9 /* AddImageCollectionViewCell.swift in Sources */,
+				69A837272E7B42640022B8D9 /* AddPlacePresenter.swift in Sources */,
+				69A837282E7B42640022B8D9 /* AddPlaceInteractor.swift in Sources */,
+				69A837292E7B42640022B8D9 /* AddPlaceRouter.swift in Sources */,
 				69856D912E798A5600AAF070 /* HomeContract.swift in Sources */,
 				69629C272E7AFCF000C4BF0E /* Enums.swift in Sources */,
+				69F28B4D2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift in Sources */,
 				696252D42E79B4C900F1AB57 /* UIStoryboardExtension.swift in Sources */,
+				69F28B492E7F054100714A3E /* SearchCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,6 +1102,14 @@
 				minimumVersion = 6.9.0;
 			};
 		};
+		69CF35482E7EB415007CDB63 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -869,6 +1117,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 696252CF2E79B04200F1AB57 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		69CF35492E7EB415007CDB63 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 69CF35482E7EB415007CDB63 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

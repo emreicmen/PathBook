@@ -37,4 +37,10 @@ extension HomeRouter: HomeWireframe {
   func pop() {
     view?.dismiss(animated: true)
   }
+  
+  func routeToAddPlace() {
+    let addPlaceViewController = AddPlaceRouter.setupModule()
+
+    view?.navigationController?.pushViewController(addPlaceViewController, animated: true)
+  }
 }

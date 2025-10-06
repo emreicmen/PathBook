@@ -16,6 +16,7 @@ final class LauchPresenter {
 
 extension LauchPresenter: LauchPresentation {
   func viewDidLoad() {
+    
     view?.setupUI()
   }
   
