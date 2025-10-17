@@ -35,8 +35,6 @@
 		69856D8F2E798A5600AAF070 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D882E798A5600AAF070 /* HomeInteractor.swift */; };
 		69856D902E798A5600AAF070 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D8A2E798A5600AAF070 /* HomeRouter.swift */; };
 		69856D912E798A5600AAF070 /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69856D872E798A5600AAF070 /* HomeContract.swift */; };
-		699F47682E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F47662E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift */; };
-		699F47692E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 699F47672E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib */; };
 		699F47752E7C2E13000A02B9 /* AddImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 699F47742E7C2E13000A02B9 /* AddImageCollectionViewCell.xib */; };
 		699F47762E7C2E13000A02B9 /* AddImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699F47732E7C2E13000A02B9 /* AddImageCollectionViewCell.swift */; };
 		69A837252E7B42640022B8D9 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A837242E7B42640022B8D9 /* AddPlaceViewController.swift */; };
@@ -45,9 +43,13 @@
 		69A837282E7B42640022B8D9 /* AddPlaceInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A837212E7B42640022B8D9 /* AddPlaceInteractor.swift */; };
 		69A837292E7B42640022B8D9 /* AddPlaceRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A837232E7B42640022B8D9 /* AddPlaceRouter.swift */; };
 		69A8372A2E7B42640022B8D9 /* AddPlace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69A8371F2E7B42640022B8D9 /* AddPlace.storyboard */; };
+		69BB42D02E9FD2E200BB9D5C /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BB42CF2E9FD2E200BB9D5C /* ImageCollectionViewCell.xib */; };
+		69BB42D12E9FD2E200BB9D5C /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BB42CE2E9FD2E200BB9D5C /* ImageCollectionViewCell.swift */; };
 		69CF35462E7EB2FB007CDB63 /* AdBannerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CF35452E7EB2FB007CDB63 /* AdBannerView.xib */; };
 		69CF35472E7EB2FB007CDB63 /* AdBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CF35442E7EB2FB007CDB63 /* AdBannerView.swift */; };
 		69CF354A2E7EB415007CDB63 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 69CF35492E7EB415007CDB63 /* SnapKit */; };
+		69D078ED2E940AD50040CF91 /* MapKitCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69D078EC2E940AD50040CF91 /* MapKitCollectionViewCell.xib */; };
+		69D078EE2E940AD50040CF91 /* MapKitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D078EB2E940AD50040CF91 /* MapKitCollectionViewCell.swift */; };
 		69D08F292E8FFCF5009BAD75 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D08F282E8FFCF5009BAD75 /* Place.swift */; };
 		69F28B352E7F02C600714A3E /* SegmentedControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F28B322E7F02C600714A3E /* SegmentedControlView.swift */; };
 		69F28B362E7F02C600714A3E /* SegmentedControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F28B332E7F02C600714A3E /* SegmentedControlView.xib */; };
@@ -59,6 +61,8 @@
 		69F28B4A2E7F054100714A3E /* SearchCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F28B482E7F054100714A3E /* SearchCollectionViewCell.xib */; };
 		69F28B4D2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F28B4B2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift */; };
 		69F28B4E2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F28B4C2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib */; };
+		69F9D8042E9D41F200B0C73D /* PlaceInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F9D8022E9D41F200B0C73D /* PlaceInfoCollectionViewCell.swift */; };
+		69F9D8052E9D41F200B0C73D /* PlaceInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69F9D8032E9D41F200B0C73D /* PlaceInfoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,8 +114,6 @@
 		69856D892E798A5600AAF070 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		69856D8A2E798A5600AAF070 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		69856D8B2E798A5600AAF070 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		699F47662E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectCollectionViewCell.swift; sourceTree = "<group>"; };
-		699F47672E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategorySelectCollectionViewCell.xib; sourceTree = "<group>"; };
 		699F47732E7C2E13000A02B9 /* AddImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		699F47742E7C2E13000A02B9 /* AddImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		69A8371F2E7B42640022B8D9 /* AddPlace.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddPlace.storyboard; sourceTree = "<group>"; };
@@ -120,8 +122,12 @@
 		69A837222E7B42640022B8D9 /* AddPlacePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlacePresenter.swift; sourceTree = "<group>"; };
 		69A837232E7B42640022B8D9 /* AddPlaceRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceRouter.swift; sourceTree = "<group>"; };
 		69A837242E7B42640022B8D9 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
+		69BB42CE2E9FD2E200BB9D5C /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		69BB42CF2E9FD2E200BB9D5C /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		69CF35442E7EB2FB007CDB63 /* AdBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerView.swift; sourceTree = "<group>"; };
 		69CF35452E7EB2FB007CDB63 /* AdBannerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdBannerView.xib; sourceTree = "<group>"; };
+		69D078EB2E940AD50040CF91 /* MapKitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitCollectionViewCell.swift; sourceTree = "<group>"; };
+		69D078EC2E940AD50040CF91 /* MapKitCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapKitCollectionViewCell.xib; sourceTree = "<group>"; };
 		69D08F282E8FFCF5009BAD75 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		69F28B322E7F02C600714A3E /* SegmentedControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlView.swift; sourceTree = "<group>"; };
 		69F28B332E7F02C600714A3E /* SegmentedControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedControlView.xib; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 		69F28B482E7F054100714A3E /* SearchCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCollectionViewCell.xib; sourceTree = "<group>"; };
 		69F28B4B2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlCollectionViewCell.swift; sourceTree = "<group>"; };
 		69F28B4C2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedControlCollectionViewCell.xib; sourceTree = "<group>"; };
+		69F9D8022E9D41F200B0C73D /* PlaceInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		69F9D8032E9D41F200B0C73D /* PlaceInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceInfoCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -411,18 +419,10 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		699F47652E7BE3A6000A02B9 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				699F47662E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift */,
-				699F47672E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		699F47722E7C2DCD000A02B9 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				69BB42CD2E9FD2CA00BB9D5C /* ImageCell */,
 				699F47732E7C2E13000A02B9 /* AddImageCollectionViewCell.swift */,
 				699F47742E7C2E13000A02B9 /* AddImageCollectionViewCell.xib */,
 			);
@@ -468,8 +468,9 @@
 		69A8372E2E7B42970022B8D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				69D078E92E940A880040CF91 /* PlaceInfo */,
+				69D078E82E940A7F0040CF91 /* MapKit */,
 				699F47722E7C2DCD000A02B9 /* Image */,
-				699F47652E7BE3A6000A02B9 /* Category */,
 				69A8371F2E7B42640022B8D9 /* AddPlace.storyboard */,
 				69A837242E7B42640022B8D9 /* AddPlaceViewController.swift */,
 			);
@@ -482,6 +483,15 @@
 				69A837202E7B42640022B8D9 /* AddPlaceContract.swift */,
 			);
 			path = Contract;
+			sourceTree = "<group>";
+		};
+		69BB42CD2E9FD2CA00BB9D5C /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				69BB42CE2E9FD2E200BB9D5C /* ImageCollectionViewCell.swift */,
+				69BB42CF2E9FD2E200BB9D5C /* ImageCollectionViewCell.xib */,
+			);
+			path = ImageCell;
 			sourceTree = "<group>";
 		};
 		69CF353D2E7EB127007CDB63 /* AdBannerView */ = {
@@ -502,6 +512,24 @@
 				69CF353D2E7EB127007CDB63 /* AdBannerView */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		69D078E82E940A7F0040CF91 /* MapKit */ = {
+			isa = PBXGroup;
+			children = (
+				69D078EB2E940AD50040CF91 /* MapKitCollectionViewCell.swift */,
+				69D078EC2E940AD50040CF91 /* MapKitCollectionViewCell.xib */,
+			);
+			path = MapKit;
+			sourceTree = "<group>";
+		};
+		69D078E92E940A880040CF91 /* PlaceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				69F9D8022E9D41F200B0C73D /* PlaceInfoCollectionViewCell.swift */,
+				69F9D8032E9D41F200B0C73D /* PlaceInfoCollectionViewCell.xib */,
+			);
+			path = PlaceInfo;
 			sourceTree = "<group>";
 		};
 		69D08F272E8FFC16009BAD75 /* Entities */ = {
@@ -686,7 +714,6 @@
 				69CF35462E7EB2FB007CDB63 /* AdBannerView.xib in Resources */,
 				69A8372A2E7B42640022B8D9 /* AddPlace.storyboard in Resources */,
 				69629C0F2E7ACAC400C4BF0E /* Lauch.storyboard in Resources */,
-				699F47692E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.xib in Resources */,
 				69856D722E79897D00AAF070 /* Assets.xcassets in Resources */,
 				69629C232E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.xib in Resources */,
 				69629C192E7AEF9E00C4BF0E /* PlacesCollectionViewCell.xib in Resources */,
@@ -694,10 +721,13 @@
 				695AD6F72E900B8A0009029F /* PlaceListCollectionViewCell.xib in Resources */,
 				69856D742E79897D00AAF070 /* LaunchScreen.storyboard in Resources */,
 				69F28B402E7F039600714A3E /* MapKitView.xib in Resources */,
+				69D078ED2E940AD50040CF91 /* MapKitCollectionViewCell.xib in Resources */,
+				69F9D8052E9D41F200B0C73D /* PlaceInfoCollectionViewCell.xib in Resources */,
 				69F28B4E2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.xib in Resources */,
 				699F47752E7C2E13000A02B9 /* AddImageCollectionViewCell.xib in Resources */,
 				69F28B4A2E7F054100714A3E /* SearchCollectionViewCell.xib in Resources */,
 				69F28B3B2E7F036000714A3E /* SearchBarView.xib in Resources */,
+				69BB42D02E9FD2E200BB9D5C /* ImageCollectionViewCell.xib in Resources */,
 				69856D8C2E798A5600AAF070 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -723,18 +753,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				699F47682E7BE3F9000A02B9 /* CategorySelectCollectionViewCell.swift in Sources */,
 				69F28B3A2E7F036000714A3E /* SearchBarView.swift in Sources */,
 				69856D762E79897D00AAF070 /* AppDelegate.swift in Sources */,
 				69F28B352E7F02C600714A3E /* SegmentedControlView.swift in Sources */,
 				69856D8D2E798A5600AAF070 /* HomeViewController.swift in Sources */,
 				69629C0A2E7ACAC400C4BF0E /* LauchRouter.swift in Sources */,
 				69629C0B2E7ACAC400C4BF0E /* LauchViewController.swift in Sources */,
+				69D078EE2E940AD50040CF91 /* MapKitCollectionViewCell.swift in Sources */,
 				69629C0C2E7ACAC400C4BF0E /* LauchPresenter.swift in Sources */,
 				69CF35472E7EB2FB007CDB63 /* AdBannerView.swift in Sources */,
 				69D08F292E8FFCF5009BAD75 /* Place.swift in Sources */,
 				69629C0D2E7ACAC400C4BF0E /* LauchContract.swift in Sources */,
 				69629C1A2E7AEF9E00C4BF0E /* PlacesCollectionViewCell.swift in Sources */,
+				69BB42D12E9FD2E200BB9D5C /* ImageCollectionViewCell.swift in Sources */,
 				69629C0E2E7ACAC400C4BF0E /* LauchInteractor.swift in Sources */,
 				696252CE2E79B01100F1AB57 /* BaseInteractor.swift in Sources */,
 				69629C242E7AF7EF00C4BF0E /* CategoriesCollectionViewCell.swift in Sources */,
@@ -751,6 +782,7 @@
 				69A837292E7B42640022B8D9 /* AddPlaceRouter.swift in Sources */,
 				69856D912E798A5600AAF070 /* HomeContract.swift in Sources */,
 				69629C272E7AFCF000C4BF0E /* Enums.swift in Sources */,
+				69F9D8042E9D41F200B0C73D /* PlaceInfoCollectionViewCell.swift in Sources */,
 				69F28B4D2E7F0C3100714A3E /* SegmentedControlCollectionViewCell.swift in Sources */,
 				696252D42E79B4C900F1AB57 /* UIStoryboardExtension.swift in Sources */,
 				69F28B492E7F054100714A3E /* SearchCollectionViewCell.swift in Sources */,

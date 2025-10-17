@@ -14,6 +14,8 @@ class PlaceListCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var summaryLabel: UILabel!
   @IBOutlet weak var placeImageView: UIImageView!
   @IBOutlet weak var pageControl: UIPageControl!
+  //  @IBOutlet weak var placeImageContainerView: UIView!
+  @IBOutlet weak var containerView: UIView!
   
   private var categories: [String] = []
   
@@ -31,8 +33,21 @@ class PlaceListCollectionViewCell: UICollectionViewCell {
     
     categoryCollectionView.delegate = self
     categoryCollectionView.dataSource = self
-        
-    categoryCollectionView.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+    
+    categoryCollectionView.contentInset = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
+  }
+  
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    
+    containerView.layer.cornerRadius = 20
+    containerView.layer.masksToBounds = true
+    
+    containerView.layer.borderWidth = 2
+    containerView.layer.borderColor = UIColor.systemBlue.cgColor
+    placeImageView.layer.cornerRadius = 20
+    placeImageView.layer.masksToBounds = true
+    placeImageView.clipsToBounds = true
   }
   
   func configure(with place: Place) {
@@ -59,8 +74,7 @@ extension PlaceListCollectionViewCell: UICollectionViewDelegate, UICollectionVie
     return cell
   }
   
-  
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: 70, height: 30)
+    return CGSize(width: UIScreen.main.bounds.width * 0.2, height: 30)
   }
 }

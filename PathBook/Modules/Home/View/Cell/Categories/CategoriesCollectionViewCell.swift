@@ -8,10 +8,13 @@
 import UIKit
 
 class CategoriesCollectionViewCell: UICollectionViewCell {
+  @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var categoryNameLabel: UILabel!
 
   func configure(with title: String) {
-    layer.cornerRadius = 4
+    containerView.layer.cornerRadius = 10
+    containerView.backgroundColor = .red
+    
     categoryNameLabel.text = title
   }
 }

@@ -44,26 +44,26 @@ final class HomeViewController: UIViewController {
   @IBAction func searchButtonTapped(_ sender: UIButton) {
     isSearchVisible.toggle()
     searchButton.isEnabled = false
-    // 1️⃣ Diziyi güncelle
+    
     if isSearchVisible {
       homepageCells.insert(.search, at: 0)
     } else {
       homepageCells.removeAll { $0 == .search }
     }
     
-    // 2️⃣ Batch update işlemini yap
+    
     placesCollectionView.performBatchUpdates({
       if isSearchVisible {
-        // Search cell ekle
+        
         placesCollectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
       } else {
-        // Search cell kaldır
+        
         if placesCollectionView.numberOfItems(inSection: 0) > 0 {
           placesCollectionView.deleteItems(at: [IndexPath(item: 0, section: 0)])
         }
       }
     }, completion: { _ in
-      // 3️⃣ Sadece places hücresini güvenli şekilde güncelle
+      
       if let placesIndex = self.homepageCells.firstIndex(of: .places),
          placesIndex < self.placesCollectionView.numberOfItems(inSection: 0) {
         
@@ -72,7 +72,6 @@ final class HomeViewController: UIViewController {
           self.placesCollectionView.reloadItems(at: [indexPath])
         }
       } else {
-        // Fallback: senkron hatası olursa tamamen yenile
         self.placesCollectionView.reloadData()
       }
     })
@@ -89,7 +88,7 @@ final class HomeViewController: UIViewController {
     layout.scrollDirection = .vertical
     layout.minimumLineSpacing = 8
     layout.minimumInteritemSpacing = 0
-    layout.estimatedItemSize = .zero   // 🔑 bu satır çok önemli
+    layout.estimatedItemSize = .zero
     placesCollectionView.collectionViewLayout = layout
     
     let searchCellNib = UINib(nibName: CollectionViewCellIdentifier.search, bundle: nil)
@@ -100,8 +99,6 @@ final class HomeViewController: UIViewController {
     
     let placesCellNib = UINib(nibName: CollectionViewCellIdentifier.places, bundle: nil)
     placesCollectionView.register(placesCellNib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.places)
-    
-    
   }
 }
 

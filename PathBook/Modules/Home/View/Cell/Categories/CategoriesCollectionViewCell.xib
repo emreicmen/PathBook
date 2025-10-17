@@ -19,29 +19,17 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mtg-vn-3mU">
                         <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6z-0V-lHB">
-                                <rect key="frame" x="10" y="10" width="55" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafê" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-rV-pPU">
-                                        <rect key="frame" x="13.333333333333334" y="7.3333333333333313" width="28.333333333333329" height="15.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="tLx-rV-pPU" firstAttribute="centerX" secondItem="V6z-0V-lHB" secondAttribute="centerX" id="jda-D9-EoY"/>
-                                    <constraint firstItem="tLx-rV-pPU" firstAttribute="centerY" secondItem="V6z-0V-lHB" secondAttribute="centerY" id="rSF-Sp-Pqx"/>
-                                </constraints>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafê" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLx-rV-pPU">
+                                <rect key="frame" x="22.666666666666671" y="16.666666666666668" width="30" height="17.000000000000004"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="V6z-0V-lHB" secondAttribute="bottom" constant="10" id="03H-SR-i4s"/>
-                            <constraint firstItem="V6z-0V-lHB" firstAttribute="top" secondItem="Mtg-vn-3mU" secondAttribute="top" constant="10" id="7j8-fm-TVS"/>
-                            <constraint firstItem="V6z-0V-lHB" firstAttribute="leading" secondItem="Mtg-vn-3mU" secondAttribute="leading" constant="10" id="YIe-LM-NnZ"/>
-                            <constraint firstAttribute="trailing" secondItem="V6z-0V-lHB" secondAttribute="trailing" constant="10" id="sZ2-n6-ShB"/>
+                            <constraint firstItem="tLx-rV-pPU" firstAttribute="centerY" secondItem="Mtg-vn-3mU" secondAttribute="centerY" id="Jx2-qp-Hy8"/>
+                            <constraint firstItem="tLx-rV-pPU" firstAttribute="centerX" secondItem="Mtg-vn-3mU" secondAttribute="centerX" id="zh4-0n-7S3"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -56,6 +44,7 @@
             </constraints>
             <connections>
                 <outlet property="categoryNameLabel" destination="tLx-rV-pPU" id="7Bw-GM-jgu"/>
+                <outlet property="containerView" destination="Mtg-vn-3mU" id="fMl-uR-Z0L"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
         </collectionViewCell>

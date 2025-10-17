@@ -61,11 +61,6 @@ extension PlacesCollectionViewCell: UICollectionViewDelegate, UICollectionViewDa
 
 extension PlacesCollectionViewCell: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//    let width: CGFloat = 75   // istediğin sabit yükseklik
-//    let height: CGFloat = 50   // istediğin sabit yükseklik
-//    
-//    return CGSize(width: width, height: height)
-  
   let width = UIScreen.main.bounds.width - 12
   let height: CGFloat = 200
     

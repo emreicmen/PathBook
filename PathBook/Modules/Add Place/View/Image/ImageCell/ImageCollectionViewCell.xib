@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImageCollectionViewCell" id="gTV-IL-0wX" customClass="ImageCollectionViewCell" customModule="PathBook" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qsI-KV-jvy">
+                        <rect key="frame" x="0.0" y="0.0" width="80" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="JEB-iu-J1F">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="120"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNq-Ho-mUP">
+                                <rect key="frame" x="60" y="10" width="10" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="10" id="OXN-Fe-7la"/>
+                                    <constraint firstAttribute="height" constant="10" id="nqb-js-nUF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GNq-Ho-mUP" secondAttribute="trailing" constant="10" id="1rg-kZ-q9x"/>
+                            <constraint firstItem="GNq-Ho-mUP" firstAttribute="top" secondItem="qsI-KV-jvy" secondAttribute="top" constant="10" id="7DT-pe-KIn"/>
+                            <constraint firstItem="JEB-iu-J1F" firstAttribute="leading" secondItem="qsI-KV-jvy" secondAttribute="leading" id="De5-hu-lGq"/>
+                            <constraint firstItem="JEB-iu-J1F" firstAttribute="top" secondItem="qsI-KV-jvy" secondAttribute="top" id="eBg-6S-iZt"/>
+                            <constraint firstAttribute="bottom" secondItem="JEB-iu-J1F" secondAttribute="bottom" id="kBj-Oj-uMT"/>
+                            <constraint firstAttribute="trailing" secondItem="JEB-iu-J1F" secondAttribute="trailing" id="lIy-u6-yF4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="qsI-KV-jvy" secondAttribute="trailing" id="ANE-Ev-hBE"/>
+                <constraint firstItem="qsI-KV-jvy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ICb-nv-j7c"/>
+                <constraint firstAttribute="bottom" secondItem="qsI-KV-jvy" secondAttribute="bottom" id="MLh-oe-u49"/>
+                <constraint firstItem="qsI-KV-jvy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b2M-yq-irB"/>
+            </constraints>
+            <size key="customSize" width="82" height="123"/>
+            <connections>
+                <outlet property="closeButton" destination="GNq-Ho-mUP" id="vEO-jl-v8k"/>
+                <outlet property="containerView" destination="qsI-KV-jvy" id="ZGU-kp-0RK"/>
+                <outlet property="imageView" destination="JEB-iu-J1F" id="OPk-HE-iRU"/>
+            </connections>
+            <point key="canvasLocation" x="163.35877862595419" y="179.22535211267606"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="sampleImage" width="960" height="1282"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+    </resources>
+</document>

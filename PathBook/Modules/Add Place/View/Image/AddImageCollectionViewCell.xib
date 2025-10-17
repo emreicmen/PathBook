@@ -1,53 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24128" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AddImageCollectionViewCell" customModule="PathBook" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="70" height="110"/>
+            <rect key="frame" x="0.0" y="0.0" width="277" height="110"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="70" height="110"/>
+                <rect key="frame" x="0.0" y="0.0" width="277" height="110"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleImage" translatesAutoresizingMaskIntoConstraints="NO" id="zOq-8g-k0w">
-                        <rect key="frame" x="0.0" y="0.0" width="70" height="110"/>
-                    </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkJ-DB-lFG">
-                        <rect key="frame" x="56" y="4" width="10" height="10"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Dp-nc-USp">
+                        <rect key="frame" x="0.0" y="0.0" width="277" height="110"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="iZK-CP-WA8">
+                                <rect key="frame" x="0.0" y="0.0" width="277" height="110"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eWn-rt-amg">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="2" minY="2" maxX="2" maxY="2"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="-1" id="hK0-Ff-lvg"/>
+                                    <outlet property="delegate" destination="-1" id="hhe-AJ-MAf"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="10" id="XSm-GX-s1a"/>
-                            <constraint firstAttribute="height" constant="10" id="f0E-0L-bgg"/>
+                            <constraint firstItem="iZK-CP-WA8" firstAttribute="top" secondItem="9Dp-nc-USp" secondAttribute="top" id="BBb-xs-uCc"/>
+                            <constraint firstItem="iZK-CP-WA8" firstAttribute="leading" secondItem="9Dp-nc-USp" secondAttribute="leading" id="Dx8-CW-FOi"/>
+                            <constraint firstAttribute="trailing" secondItem="iZK-CP-WA8" secondAttribute="trailing" id="QDH-Nx-3MQ"/>
+                            <constraint firstAttribute="bottom" secondItem="iZK-CP-WA8" secondAttribute="bottom" id="out-fA-9f3"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="plain" image="xmark.circle" catalog="system"/>
-                    </button>
+                    </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="zOq-8g-k0w" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7of-RX-Qb0"/>
-                <constraint firstItem="zOq-8g-k0w" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="b3e-uB-ZhN"/>
-                <constraint firstAttribute="trailing" secondItem="zOq-8g-k0w" secondAttribute="trailing" id="hi4-TA-5zj"/>
-                <constraint firstItem="pkJ-DB-lFG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="4" id="m9B-23-bFc"/>
-                <constraint firstAttribute="trailing" secondItem="pkJ-DB-lFG" secondAttribute="trailing" constant="4" id="tDv-A2-tGE"/>
-                <constraint firstAttribute="bottom" secondItem="zOq-8g-k0w" secondAttribute="bottom" id="uLk-xC-swZ"/>
+                <constraint firstAttribute="bottom" secondItem="9Dp-nc-USp" secondAttribute="bottom" id="9IL-gx-xx2"/>
+                <constraint firstAttribute="trailing" secondItem="9Dp-nc-USp" secondAttribute="trailing" id="c9K-ep-Lyh"/>
+                <constraint firstItem="9Dp-nc-USp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pUF-1d-Psm"/>
+                <constraint firstItem="9Dp-nc-USp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ymz-fU-UeW"/>
             </constraints>
+            <size key="customSize" width="277" height="110"/>
             <connections>
-                <outlet property="deleteButton" destination="pkJ-DB-lFG" id="3xk-hg-FS5"/>
-                <outlet property="placeImageView" destination="zOq-8g-k0w" id="Y83-RF-w1r"/>
+                <outlet property="containerView" destination="9Dp-nc-USp" id="QUN-JN-tzE"/>
+                <outlet property="imageCollectionView" destination="iZK-CP-WA8" id="Qfd-D2-iGj"/>
             </connections>
-            <point key="canvasLocation" x="-154" y="-12"/>
+            <point key="canvasLocation" x="3.8167938931297707" y="-12.67605633802817"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="sampleImage" width="960" height="1282"/>
-        <image name="xmark.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

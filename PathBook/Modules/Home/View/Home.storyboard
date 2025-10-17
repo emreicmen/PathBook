@@ -64,7 +64,7 @@
                     <navigationItem key="navigationItem" id="jji-uH-Yqx">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="8lS-d3-kzv">
                             <view key="customView" contentMode="scaleToFill" misplaced="YES" id="U1F-Ha-iMD">
-                                <rect key="frame" x="20" y="4" width="25" height="36"/>
+                                <rect key="frame" x="20" y="4.0000000000000009" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQP-OE-x7P">
@@ -85,29 +85,29 @@
                                 </constraints>
                             </view>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="zdT-vs-aXP">
-                            <view key="customView" contentMode="scaleToFill" id="lZG-fH-0gf">
-                                <rect key="frame" x="286" y="5.5" width="87" height="33"/>
+                        <barButtonItem key="rightBarButtonItem" width="25" style="plain" id="oWY-dF-edd">
+                            <view key="customView" contentMode="scaleToFill" id="bMy-QD-CKK">
+                                <rect key="frame" x="337" y="4.0000000000000009" width="36" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3f-Io-Ude">
-                                        <rect key="frame" x="21" y="-1" width="47" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="plus" catalog="system"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system">
-                                            <color key="baseForegroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M9d-TO-x8z">
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="36"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
                                         <connections>
-                                            <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfH-4q-h7E"/>
+                                            <action selector="addButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cHO-ua-j4W"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="M9d-TO-x8z" firstAttribute="leading" secondItem="bMy-QD-CKK" secondAttribute="leading" id="VV9-zU-gTC"/>
+                                    <constraint firstAttribute="trailing" secondItem="M9d-TO-x8z" secondAttribute="trailing" id="XWg-aV-8XC"/>
+                                    <constraint firstAttribute="trailing" secondItem="M9d-TO-x8z" secondAttribute="trailing" constant="-20" id="bVe-IE-5fk"/>
+                                    <constraint firstItem="M9d-TO-x8z" firstAttribute="top" secondItem="bMy-QD-CKK" secondAttribute="top" id="dfc-cu-Pfo"/>
+                                    <constraint firstAttribute="bottom" secondItem="M9d-TO-x8z" secondAttribute="bottom" id="spj-6x-1UF"/>
+                                </constraints>
                             </view>
-                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
@@ -144,9 +144,6 @@
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

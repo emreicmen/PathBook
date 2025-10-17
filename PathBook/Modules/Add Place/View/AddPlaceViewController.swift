@@ -9,17 +9,19 @@
 import UIKit
 import MapKit
 
+enum AddPlaceCollectionViewCellTypes {
+  case placeInfo
+  case addImage
+  case search
+  case mapkit
+}
+
 final class AddPlaceViewController: UIViewController {
-  @IBOutlet weak var saveButton: UIButton!
-  @IBOutlet weak var placeNameTextView: UITextView!
-  @IBOutlet weak var placeLinkTextView: UITextView!
-  @IBOutlet weak var categoryCollectionView: UICollectionView!
-  @IBOutlet weak var placeSummaryTextView: UITextView!
-  @IBOutlet weak var placeImagesCollectionView: UICollectionView!
-  @IBOutlet weak var addPhotosButton: UIButton!
-  @IBOutlet weak var searchBar: UISearchBar!
-  @IBOutlet weak var mapkit: MKMapView!
+  @IBOutlet weak var adBannerView: UIView!
+  @IBOutlet weak var addPlaceCollectionView: UICollectionView!
   
+  private var addPlaceCells: [AddPlaceCollectionViewCellTypes] = [.placeInfo, .addImage, .search, .mapkit]
+
   var presenter: AddPlacePresentation!
   
   // MARK: Lifecycle
@@ -27,47 +29,10 @@ final class AddPlaceViewController: UIViewController {
     super.viewDidLoad()
     
     presenter.viewDidLoad()
-    
-    setCollectionViewFlowLayout()
-    setCollectionViewFlowLayout2()
-  }
-  
-  @IBAction func saveButtonTapped(_ sender: UIButton) {
-    
   }
   
   @IBAction func backButtonTapped(_ sender: UIBarButtonItem) {
     presenter.backButtonTapped()
-  }
-  
-  @IBAction func addPhotosButtonTapped(_ sender: UIButton) {
-    
-  }
-  
-  private func configureCSelectategoryCollectionView() {
-    let nib = UINib(nibName: CollectionViewCellIdentifier.categorySelect, bundle: nil)
-    categoryCollectionView.register(nib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.categorySelect)
-  }
-  
-  private func configureAddImageCollectionView() {
-    let nib = UINib(nibName: CollectionViewCellIdentifier.addImage, bundle: nil)
-    placeImagesCollectionView.register(nib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.addImage)
-  }
-  
-  private func setCollectionViewFlowLayout() {
-    let layout = UICollectionViewFlowLayout()
-    
-    layout.scrollDirection = .horizontal
-    layout.itemSize = CGSize(width: 75, height: 50)
-    placeImagesCollectionView.collectionViewLayout = layout
-  }
-  
-  private func setCollectionViewFlowLayout2() {
-    let layout = UICollectionViewFlowLayout()
-    
-    layout.scrollDirection = .horizontal
-    layout.itemSize = CGSize(width: 75, height: 50)
-    categoryCollectionView.collectionViewLayout = layout
   }
 }
 
@@ -75,41 +40,103 @@ extension AddPlaceViewController: AddPlaceView {
   func setupUI() {
     navigationItem.title = "Add Place"
     
-    configureCSelectategoryCollectionView()
-    configureAddImageCollectionView()
+    configurePlacesCollectionView()
+  }
+  
+  private func configurePlacesCollectionView() {
+    let layout = UICollectionViewFlowLayout()
+    layout.scrollDirection = .vertical
+    layout.minimumLineSpacing = 8
+    layout.minimumInteritemSpacing = 0
+    layout.estimatedItemSize = .zero   // 🔑 bu satır çok önemli
+    addPlaceCollectionView.collectionViewLayout = layout
+    
+    let placeInfoCellNib = UINib(nibName: CollectionViewCellIdentifier.placeInfo, bundle: nil)
+    addPlaceCollectionView.register(placeInfoCellNib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.placeInfo)
+    
+    let addImageCellNib = UINib(nibName: CollectionViewCellIdentifier.addImage, bundle: nil)
+    addPlaceCollectionView.register(addImageCellNib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.addImage)
+    
+    let mapKitCellNib = UINib(nibName: CollectionViewCellIdentifier.mapKit, bundle: nil)
+    addPlaceCollectionView.register(mapKitCellNib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.mapKit)
+    
+    let searchCellNib = UINib(nibName: CollectionViewCellIdentifier.search, bundle: nil)
+    addPlaceCollectionView.register(searchCellNib, forCellWithReuseIdentifier: CollectionViewCellIdentifier.search)
   }
 }
 
-extension AddPlaceViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension AddPlaceViewController: UICollectionViewDataSource, UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    if collectionView == categoryCollectionView {
-      return 10
-    } else if collectionView == placeImagesCollectionView {
-      return 5
-    }
-    return 0
+    return addPlaceCells.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    if collectionView == categoryCollectionView {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCellIdentifier.categorySelect, for: indexPath) as! CategorySelectCollectionViewCell
+    let cellType = addPlaceCells[indexPath.item]
+    
+    let cellIdentifier: String
+    switch cellType {
+    case .placeInfo:
+      cellIdentifier = CollectionViewCellIdentifier.placeInfo
+    case .addImage:
+      cellIdentifier = CollectionViewCellIdentifier.addImage
+    case .search:
+      cellIdentifier = CollectionViewCellIdentifier.search
+    case .mapkit:
+      cellIdentifier = CollectionViewCellIdentifier.mapKit
+    }
+    
+    let cell = addPlaceCollectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+    
+    switch cellType {
+    case .placeInfo:
+      let cell = cell as! PlaceInfoCollectionViewCell
       cell.configure()
+ 
       return cell
-    } else {
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCellIdentifier.addImage, for: indexPath) as! AddImageCollectionViewCell
+    case .addImage:
+      let cell = cell as! AddImageCollectionViewCell
       cell.configure()
+
+      return cell
+    case .search:
+      let cell = cell as! SearchCollectionViewCell
+      cell.configure()
+
+      return cell
+    case .mapkit:
+      let cell = cell as! MapKitCollectionViewCell
+      cell.configure()
+      
       return cell
     }
   }
 }
 
-//extension AddPlaceViewController: UICollectionViewDelegateFlowLayout {
-//  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//    
-//    if collectionView == placeImagesCollectionView {
-//      return CGSize(width: 75, height: 50)
-//    } else {
-//      return CGSize(width: 50, height: 70)
-//    }
-//  }
-//}
+extension AddPlaceViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    let cellType = addPlaceCells[indexPath.item]
+    
+    let screenWidth = UIScreen.main.bounds.width - 12
+    let screenHeight = addPlaceCollectionView.frame.height
+    
+    switch cellType {
+    case .placeInfo:
+      return CGSize(width: screenWidth, height: screenHeight * 0.40)
+
+    case .addImage:
+      return CGSize(width: screenWidth, height: screenHeight * 0.15)
+    case .search:
+      return CGSize(width: screenWidth, height: screenHeight * 0.1)
+    case .mapkit:
+      return CGSize(width: screenWidth, height: screenHeight * 0.4 - 55)
+    }
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    return 5
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+    return UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
+  }
+}
