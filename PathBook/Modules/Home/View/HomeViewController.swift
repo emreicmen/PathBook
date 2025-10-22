@@ -19,6 +19,8 @@ final class HomeViewController: UIViewController {
   @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var placesCollectionView: UICollectionView!
   @IBOutlet weak var adBanner: AdBannerView!
+  @IBOutlet weak var addPlaceBarButton: UIBarButtonItem!
+  @IBOutlet weak var searchBarButton: UIBarButtonItem!
   
   private var homepageCells: [CollectionViewCellTypes] = [.segmentedControl, .places]
   private var isSearchVisible = false
@@ -51,19 +53,15 @@ final class HomeViewController: UIViewController {
       homepageCells.removeAll { $0 == .search }
     }
     
-    
     placesCollectionView.performBatchUpdates({
       if isSearchVisible {
-        
         placesCollectionView.insertItems(at: [IndexPath(item: 0, section: 0)])
       } else {
-        
         if placesCollectionView.numberOfItems(inSection: 0) > 0 {
           placesCollectionView.deleteItems(at: [IndexPath(item: 0, section: 0)])
         }
       }
     }, completion: { _ in
-      
       if let placesIndex = self.homepageCells.firstIndex(of: .places),
          placesIndex < self.placesCollectionView.numberOfItems(inSection: 0) {
         
@@ -112,6 +110,11 @@ extension HomeViewController: HomeView {
     placesCollectionView.dataSource = self
     
     placesCollectionView.reloadData()
+    
+    if #available(iOS 26.0, *) {
+      addPlaceBarButton.hidesSharedBackground = true
+      searchBarButton.hidesSharedBackground = true
+    }
   }
 }
 
@@ -181,6 +184,6 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-    return UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
+    return UIEdgeInsets(top: 0, left: 0, bottom: 2, right: 0)
   }
 }

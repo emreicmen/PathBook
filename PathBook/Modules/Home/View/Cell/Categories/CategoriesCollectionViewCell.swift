@@ -12,7 +12,7 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var categoryNameLabel: UILabel!
 
   func configure(with title: String) {
-    containerView.layer.cornerRadius = 10
+    containerView.layer.cornerRadius = 6
     containerView.backgroundColor = .red
     
     categoryNameLabel.text = title

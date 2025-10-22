@@ -3,8 +3,8 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24063"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,38 +17,37 @@
                 <rect key="frame" x="0.0" y="0.0" width="296" height="141"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NND-Er-4el">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v0H-na-Fy5">
                         <rect key="frame" x="0.0" y="0.0" width="296" height="141"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1s-Iy-9VW" customClass="MapKitView" customModule="PathBook" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="296" height="141"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3F-TG-m07">
+                                <rect key="frame" x="0.0" y="0.0" width="296" height="141"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="s3F-TG-m07" firstAttribute="top" secondItem="v0H-na-Fy5" secondAttribute="top" id="R77-uD-93U"/>
+                            <constraint firstItem="s3F-TG-m07" firstAttribute="leading" secondItem="v0H-na-Fy5" secondAttribute="leading" id="YjX-kT-679"/>
+                            <constraint firstAttribute="bottom" secondItem="s3F-TG-m07" secondAttribute="bottom" id="n6f-iI-ebV"/>
+                            <constraint firstAttribute="trailing" secondItem="s3F-TG-m07" secondAttribute="trailing" id="wY0-5e-UWr"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="F1s-Iy-9VW" secondAttribute="trailing" id="Dz5-OB-zi6"/>
-                <constraint firstAttribute="trailing" secondItem="NND-Er-4el" secondAttribute="trailing" id="GpM-xu-lfN"/>
-                <constraint firstItem="F1s-Iy-9VW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="dqr-fG-lee"/>
-                <constraint firstItem="NND-Er-4el" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fB9-El-1Pf"/>
-                <constraint firstItem="NND-Er-4el" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hAf-w5-9A1"/>
-                <constraint firstAttribute="bottom" secondItem="NND-Er-4el" secondAttribute="bottom" id="lwr-yC-hRT"/>
-                <constraint firstAttribute="bottom" secondItem="F1s-Iy-9VW" secondAttribute="bottom" id="pZ6-Sk-xC9"/>
-                <constraint firstItem="F1s-Iy-9VW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="q2G-it-afn"/>
+                <constraint firstAttribute="bottom" secondItem="v0H-na-Fy5" secondAttribute="bottom" id="1qw-2z-tHu"/>
+                <constraint firstItem="v0H-na-Fy5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DJ2-O3-a7W"/>
+                <constraint firstAttribute="trailing" secondItem="v0H-na-Fy5" secondAttribute="trailing" id="QhZ-9q-RRA"/>
+                <constraint firstItem="v0H-na-Fy5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ndA-XP-ejP"/>
             </constraints>
             <size key="customSize" width="296" height="141"/>
             <connections>
-                <outlet property="mapKitView" destination="F1s-Iy-9VW" id="Z6M-NM-Qtp"/>
+                <outlet property="mapKit" destination="s3F-TG-m07" id="S7d-uB-gQW"/>
             </connections>
             <point key="canvasLocation" x="308.39694656488547" y="141.90140845070422"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

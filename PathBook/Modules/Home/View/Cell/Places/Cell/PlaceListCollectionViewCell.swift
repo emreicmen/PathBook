@@ -14,7 +14,6 @@ class PlaceListCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var summaryLabel: UILabel!
   @IBOutlet weak var placeImageView: UIImageView!
   @IBOutlet weak var pageControl: UIPageControl!
-  //  @IBOutlet weak var placeImageContainerView: UIView!
   @IBOutlet weak var containerView: UIView!
   
   private var categories: [String] = []

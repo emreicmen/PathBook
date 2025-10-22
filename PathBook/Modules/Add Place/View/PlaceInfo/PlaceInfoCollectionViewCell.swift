@@ -24,6 +24,7 @@ class PlaceInfoCollectionViewCell: UICollectionViewCell {
     layout.scrollDirection = .horizontal
     layout.minimumLineSpacing = 8
     layout.minimumInteritemSpacing = 8
+    layout.estimatedItemSize = .zero // ✅ en önemli satır
     categoriesCollectionView.collectionViewLayout = layout
     
     let nib = UINib(nibName: CollectionViewCellIdentifier.category, bundle: nil)
@@ -41,9 +42,9 @@ class PlaceInfoCollectionViewCell: UICollectionViewCell {
   }
 }
 
-extension PlaceInfoCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+extension PlaceInfoCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return 5
+    return categories.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -52,6 +53,7 @@ extension PlaceInfoCollectionViewCell: UICollectionViewDelegate, UICollectionVie
     
     return cell
   }
+  
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: UIScreen.main.bounds.width * 0.2, height: 30)
   }

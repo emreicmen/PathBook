@@ -19,6 +19,8 @@ enum AddPlaceCollectionViewCellTypes {
 final class AddPlaceViewController: UIViewController {
   @IBOutlet weak var adBannerView: UIView!
   @IBOutlet weak var addPlaceCollectionView: UICollectionView!
+  @IBOutlet weak var saveBarButton: UIBarButtonItem!
+  @IBOutlet weak var backBarButton: UIBarButtonItem!
   
   private var addPlaceCells: [AddPlaceCollectionViewCellTypes] = [.placeInfo, .addImage, .search, .mapkit]
 
@@ -41,6 +43,11 @@ extension AddPlaceViewController: AddPlaceView {
     navigationItem.title = "Add Place"
     
     configurePlacesCollectionView()
+    
+    if #available(iOS 26.0, *) {
+      saveBarButton.hidesSharedBackground = true
+      backBarButton.hidesSharedBackground = true
+    }
   }
   
   private func configurePlacesCollectionView() {
@@ -100,6 +107,7 @@ extension AddPlaceViewController: UICollectionViewDataSource, UICollectionViewDe
       return cell
     case .search:
       let cell = cell as! SearchCollectionViewCell
+      cell.delegate = self
       cell.configure()
 
       return cell
@@ -121,14 +129,14 @@ extension AddPlaceViewController: UICollectionViewDelegateFlowLayout {
     
     switch cellType {
     case .placeInfo:
-      return CGSize(width: screenWidth, height: screenHeight * 0.40)
+      return CGSize(width: screenWidth, height: screenHeight * 0.3)
 
     case .addImage:
-      return CGSize(width: screenWidth, height: screenHeight * 0.15)
+      return CGSize(width: screenWidth, height: screenHeight * 0.17)
     case .search:
-      return CGSize(width: screenWidth, height: screenHeight * 0.1)
+      return CGSize(width: screenWidth, height: 44)
     case .mapkit:
-      return CGSize(width: screenWidth, height: screenHeight * 0.4 - 55)
+      return CGSize(width: screenWidth, height: screenHeight * 0.51 - 55)
     }
   }
   
@@ -138,5 +146,15 @@ extension AddPlaceViewController: UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
     return UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
+  }
+}
+
+extension AddPlaceViewController: SearchCollectionViewCellDelegate {
+  func didSearch(for text: String) {
+    // MapCell'i bul
+    if let index = addPlaceCells.firstIndex(of: .mapkit),
+       let mapCell = addPlaceCollectionView.cellForItem(at: IndexPath(item: index, section: 0)) as? MapKitCollectionViewCell {
+      mapCell.searchAndShow(text)
+    }
   }
 }

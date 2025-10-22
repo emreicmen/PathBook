@@ -105,6 +105,8 @@
                     <connections>
                         <outlet property="adBannerView" destination="Inf-a9-Jnu" id="tdy-QK-g5t"/>
                         <outlet property="addPlaceCollectionView" destination="OeG-aw-aeq" id="7Pf-Vb-rWv"/>
+                        <outlet property="backBarButton" destination="Hjr-4B-H9u" id="58B-xl-FuT"/>
+                        <outlet property="saveBarButton" destination="Oab-bC-8GM" id="m8R-ZA-20M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

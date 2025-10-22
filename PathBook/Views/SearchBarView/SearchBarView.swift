@@ -29,8 +29,7 @@ final class SearchBarView: UIView {
     
     addSubview(containerView)
     
-    containerView.layer.cornerRadius = 8
-    searchBar.layer.cornerRadius = 8
+    containerView.layer.cornerRadius = 12
     containerView.frame = self.bounds
     containerView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     containerView.layer.masksToBounds = true
