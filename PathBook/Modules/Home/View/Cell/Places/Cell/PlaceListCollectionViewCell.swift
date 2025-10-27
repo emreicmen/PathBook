@@ -32,6 +32,7 @@ class PlaceListCollectionViewCell: UICollectionViewCell {
     
     categoryCollectionView.delegate = self
     categoryCollectionView.dataSource = self
+    categoryCollectionView.allowsSelection = false
     
     categoryCollectionView.contentInset = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
   }
@@ -44,6 +45,7 @@ class PlaceListCollectionViewCell: UICollectionViewCell {
     
     containerView.layer.borderWidth = 2
     containerView.layer.borderColor = UIColor.systemBlue.cgColor
+    
     placeImageView.layer.cornerRadius = 20
     placeImageView.layer.masksToBounds = true
     placeImageView.clipsToBounds = true

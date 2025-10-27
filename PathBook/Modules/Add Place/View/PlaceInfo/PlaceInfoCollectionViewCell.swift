@@ -32,6 +32,7 @@ class PlaceInfoCollectionViewCell: UICollectionViewCell {
     
     categoriesCollectionView.delegate = self
     categoriesCollectionView.dataSource = self
+    categoriesCollectionView.allowsMultipleSelection = true
     
     categoriesCollectionView.contentInset = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
     
@@ -56,5 +57,13 @@ extension PlaceInfoCollectionViewCell: UICollectionViewDelegate, UICollectionVie
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: UIScreen.main.bounds.width * 0.2, height: 30)
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      print("Seçildi: \(categories[indexPath.item])")
+  }
+
+  func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+      print("Kaldırıldı: \(categories[indexPath.item])")
   }
 }
